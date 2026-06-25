@@ -1,8 +1,0 @@
-/**/tod_predicted_object_merger:
-  ros__parameters:
-    input_topic0: "/tod_dummy_perception_pub/output/detected_objects"   # First PredictedObjects input topic
-    input_topic1: "~/input/objects1"   # Second PredictedObjects input topic
-    output_topic_name: "~/output/objects"  # Merged PredictedObjects output topic
-    new_frame_id: "map"          # Frame the merged objects are transformed into
-    update_rate_hz: 10.0               # Merging frequency (Hz)
-    timeout_threshold: 1.0             # Drop inputs older than this many seconds

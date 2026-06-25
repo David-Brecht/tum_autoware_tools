@@ -1,10 +1,10 @@
 objects:
 ### Parked vehicle in curve, no. 1 ###
-- existence_probability: 1.0
+- existence_probability: 0.99
   frame_id: map
   classification:
   - label: 1
-    probability: 1.0
+    probability: 0.99
   kinematics:
     pose_with_covariance:
       pose:
@@ -24,11 +24,11 @@ objects:
       y: 1.7999999523162842
       z: 2.0
 ### Parked vehicle in curve, no. 2 ###
-- existence_probability: 1.0
+- existence_probability: 0.99
   frame_id: map
   classification:
   - label: 1
-    probability: 1.0
+    probability: 0.99
   kinematics:
     pose_with_covariance:
       pose:
@@ -48,11 +48,11 @@ objects:
       y: 1.7999999523162842
       z: 2.0
 ### False positive unknown ###
-- existence_probability: 1.0
+- existence_probability: 0.99
   frame_id: map
   classification:
   - label: 0
-    probability: 1.0
+    probability: 0.99
   kinematics:
     pose_with_covariance:
       pose:
@@ -72,11 +72,11 @@ objects:
       y: 0.6
       z: 0.6
 ### Pedestrian at intersection ###
-- existence_probability: 1.0
+- existence_probability: 0.99
   frame_id: map
   classification:
   - label: 7
-    probability: 1.0
+    probability: 0.99
   kinematics:
     pose_with_covariance:
       pose:

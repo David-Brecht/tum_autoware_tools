@@ -1,0 +1,8 @@
+/**/tod_detected_object_merger:
+  ros__parameters:
+    input_topic0: "/perception/object_recognition/dummy_publisher/objects"   # First DetectedObjects input topic (tod dummy publisher)
+    input_topic1: "/perception/object_recognition/detection/objects"   # Second DetectedObjects input topic
+    output_topic_name: "/perception/object_recognition/detection/merged/objects"  # Merged DetectedObjects output topic
+    new_frame_id: "map"          # Frame all inputs are transformed into before merging (inputs may differ)
+    update_rate_hz: 10.0               # Merging frequency (Hz)
+    timeout_threshold: 1.0             # Drop inputs older than this many seconds

@@ -12,6 +12,9 @@ def generate_launch_description():
     default_param_file = os.path.join(
         pkg_share, "config", "tod_perception_tools.params.yaml"
     )
+    default_merger_param_file = os.path.join(
+        pkg_share, "config", "tod_detected_object_merger.params.yaml"
+    )
 
     declare_param_file = DeclareLaunchArgument(
         "param_file",
@@ -19,7 +22,14 @@ def generate_launch_description():
         description="Path to the YAML file with parameters for tod_perception_tools nodes",
     )
 
+    declare_merger_param_file = DeclareLaunchArgument(
+        "merger_param_file",
+        default_value=default_merger_param_file,
+        description="Path to the YAML file with parameters for the detected object merger node",
+    )
+
     param_file = LaunchConfiguration("param_file")
+    merger_param_file = LaunchConfiguration("merger_param_file")
 
     use_sim_time = LaunchConfiguration('use_sim_time')
 
@@ -40,8 +50,21 @@ def generate_launch_description():
         ],
     )
 
+    tod_detected_object_merger_node = Node(
+        package="tod_perception_tools",
+        executable="tod_detected_object_merger",
+        name="tod_detected_object_merger",
+        output="screen",
+        parameters=[
+            {'use_sim_time': use_sim_time},
+            merger_param_file
+        ],
+    )
+
     return LaunchDescription([
         declare_param_file,
+        declare_merger_param_file,
         use_sim_time_arg,
         tod_dummy_perception_pub_node,
+        tod_detected_object_merger_node,
     ])

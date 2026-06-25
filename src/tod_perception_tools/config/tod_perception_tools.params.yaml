@@ -2,5 +2,11 @@
   ros__parameters:
     publish_frequency: 10.0           # Hz
     output_topic_name: "/perception/object_recognition/dummy_publisher/objects"
-    position_covariance: 0.03         # Variance (m^2) applied to object position
-    publish_predicted_objects: true  # If true, publish PredictedObjects instead of DetectedObjects
+    # Per-axis standard deviations applied to each object's initial pose. These
+    # add Gaussian noise to the published pose and populate the pose covariance
+    # diagonal (matching the tier4 dummy object rviz plugin properties).
+    std_dev_x: 0.03                   # X standard deviation [m]
+    std_dev_y: 0.03                   # Y standard deviation [m]
+    std_dev_z: 0.03                   # Z standard deviation [m]
+    std_dev_theta: 0.003                # Yaw standard deviation [rad]
+    publish_predicted_objects: false  # If true, publish PredictedObjects instead of DetectedObjects
