@@ -1,6 +1,6 @@
 /**/tod_dummy_perception_pub:
   ros__parameters:
     publish_frequency: 10.0           # Hz
-    output_topic_name: "~/output/detected_objects"
+    output_topic_name: "/perception/object_recognition/dummy_publisher/objects"
     position_covariance: 0.03         # Variance (m^2) applied to object position
-    
+    publish_predicted_objects: true  # If true, publish PredictedObjects instead of DetectedObjects
