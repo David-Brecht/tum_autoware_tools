@@ -10,7 +10,7 @@ objects:
       pose:
         position:
           x: 3690.1718795897823
-          y: 73752.20291153806
+          y: 73752.30291153806
           z: 20.18438882242656
         orientation:
           x: 0.0
@@ -24,6 +24,30 @@ objects:
       y: 1.7999999523162842
       z: 2.0
 ### Parked vehicle in curve, no. 2 ###
+# - existence_probability: 0.99
+#   frame_id: map
+#   classification:
+#   - label: 1
+#     probability: 0.99
+#   kinematics:
+#     pose_with_covariance:
+#       pose:
+#         position:
+#           x: 3690.7314890882917
+#           y: 73746.22521105291
+#           z: 20.18442025404002
+#         orientation:
+#           x: 0.0
+#           y: 0.0
+#           z: 0.8338860870184365
+#           w: 0.5519365850141487
+#   shape:
+#     type: 0
+#     dimensions:
+#       x: 3.9996286195984108
+#       y: 1.7999999523162842
+#       z: 2.0
+### Parked vehicle in ego lane ###
 - existence_probability: 0.99
   frame_id: map
   classification:
@@ -33,14 +57,14 @@ objects:
     pose_with_covariance:
       pose:
         position:
-          x: 3690.7314890882917
-          y: 73746.22521105291
-          z: 20.18442025404002
+          x: 3759.199623546463
+          y: 73688.34482874072
+          z: 20.63382875485007
         orientation:
           x: 0.0
           y: 0.0
-          z: 0.8338860870184365
-          w: 0.5519365850141487
+          z: -0.9687422925720951
+          w: 0.24806928585006505
   shape:
     type: 0
     dimensions:
